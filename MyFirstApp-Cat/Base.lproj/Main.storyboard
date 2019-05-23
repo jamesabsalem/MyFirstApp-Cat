@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp_Cat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pfd-Ch-z5e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXE-HN-GSf">
+                                <rect key="frame" x="27" y="223" width="361" height="497"/>
+                                <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="meow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NT5-Am-5Wa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEOW!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="2HY-hf-55L">
+                                <rect key="frame" x="13" y="13" width="388" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="sCe-4g-y3G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="58"/>
+                                <color key="textColor" red="0.93983809200000001" green="0.97634200689999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2HY-hf-55L" secondAttribute="trailing" constant="13" id="A4T-rv-GJ6"/>
+                            <constraint firstItem="mXE-HN-GSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="E6r-Gm-qlw"/>
+                            <constraint firstItem="pfd-Ch-z5e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EwB-sC-HBp"/>
+                            <constraint firstItem="pfd-Ch-z5e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K1s-uU-Uk9"/>
+                            <constraint firstItem="2HY-hf-55L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="UXU-0B-QXk"/>
+                            <constraint firstItem="mXE-HN-GSf" firstAttribute="top" secondItem="2HY-hf-55L" secondAttribute="bottom" constant="8" id="dMt-xe-YKS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mXE-HN-GSf" secondAttribute="trailing" constant="26" id="iZ6-lE-des"/>
+                            <constraint firstItem="2HY-hf-55L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="13" id="sdA-xo-cVZ"/>
+                            <constraint firstItem="pfd-Ch-z5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uf6-ol-eQ6"/>
+                            <constraint firstItem="pfd-Ch-z5e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ugL-Q1-VkH"/>
+                            <constraint firstAttribute="bottom" secondItem="mXE-HN-GSf" secondAttribute="bottom" constant="16" id="wwS-eO-kbg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="mXE-HN-GSf" id="W9O-Mx-jne"/>
+                        <outlet property="lable" destination="2HY-hf-55L" id="ZM2-Rg-ADn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2560" height="1600"/>
+        <image name="cat" width="900" height="978"/>
+    </resources>
+</document>
